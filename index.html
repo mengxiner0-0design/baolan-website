@@ -1,100 +1,671 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>宝蓝网站</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baolan Disposable Gloves Manufacturer | Custom Food Service Supplies</title>
+  <meta name="description" content="Baolan is a China-based disposable gloves and food service supplies manufacturer, offering disposable PE gloves, individually wrapped gloves, aprons, shower caps, trash bags, and custom packaging solutions." />
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f9fc;
-      color: #222;
-    }
-    .hero {
-      padding: 80px 10%;
-      background: linear-gradient(135deg, #0b67b2, #073f7a);
-      color: white;
-    }
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 16px;
-    }
-    .hero p {
-      font-size: 20px;
-      max-width: 720px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102033;
+      background: #f5f8fc;
       line-height: 1.6;
     }
-    .section {
-      padding: 50px 10%;
-      background: white;
-      margin: 24px auto;
-      max-width: 1100px;
-      border-radius: 16px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .products {
+
+    .nav {
+      width: 100%;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border-bottom: 1px solid #e6edf5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #075da8;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 15px;
+      color: #42566e;
+    }
+
+    .hero {
+      padding: 90px 8% 80px;
+      background:
+        radial-gradient(circle at top right, rgba(0, 117, 201, 0.14), transparent 35%),
+        linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
     }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #e6f2ff;
+      color: #075da8;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      line-height: 1.08;
+      margin: 0 0 24px;
+      color: #0b1f35;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #4c6078;
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 15px 24px;
+      background: #075da8;
+      color: #ffffff;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(7, 93, 168, 0.22);
+    }
+
+    .btn-secondary {
+      padding: 15px 24px;
+      background: #ffffff;
+      color: #075da8;
+      border: 1px solid #bdd8f0;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border: 1px solid #dce8f4;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 24px 60px rgba(15, 58, 100, 0.12);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #0b1f35;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: #f3f8fd;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid #e0edf8;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: #075da8;
+      margin-bottom: 4px;
+    }
+
+    .section {
+      padding: 76px 8%;
+    }
+
+    .section-white {
+      background: #ffffff;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-title span {
+      color: #075da8;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin: 10px 0 14px;
+      color: #0b1f35;
+    }
+
+    .section-title p {
+      color: #5c6f86;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
     .card {
-      padding: 24px;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      background: #fafafa;
+      background: #ffffff;
+      border: 1px solid #e1eaf4;
+      border-radius: 22px;
+      padding: 28px;
+      transition: 0.2s;
     }
-    .contact {
-      background: #0b67b2;
-      color: white;
-      text-align: center;
+
+    .section-white .card {
+      background: #f8fbff;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 58, 100, 0.1);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      background: #e6f2ff;
+      color: #075da8;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      color: #0b1f35;
+    }
+
+    .card p {
+      margin: 0;
+      color: #60748b;
+      font-size: 15.5px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .feature-box {
+      background: #0b3763;
+      color: #ffffff;
+      border-radius: 30px;
+      padding: 46px;
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-box::after {
+      content: "";
+      width: 260px;
+      height: 260px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      position: absolute;
+      right: -70px;
+      bottom: -70px;
+    }
+
+    .feature-box h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin: 0 0 18px;
+    }
+
+    .feature-box p {
+      color: #d9e9f8;
+      font-size: 18px;
+    }
+
+    .list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .list-item {
+      display: flex;
+      gap: 18px;
+      background: #ffffff;
+      border: 1px solid #e1eaf4;
+      padding: 22px;
+      border-radius: 18px;
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 50%;
+      background: #075da8;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .list-item h3 {
+      margin: 0 0 5px;
+      font-size: 19px;
+    }
+
+    .list-item p {
+      margin: 0;
+      color: #60748b;
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      padding: 26px;
+      border-radius: 20px;
+      border: 1px solid #e1eaf4;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      color: #0b1f35;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: #60748b;
+    }
+
+    .cta {
+      margin: 70px 8%;
+      background: linear-gradient(135deg, #075da8, #063d72);
+      color: #ffffff;
+      border-radius: 34px;
+      padding: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .cta p {
+      margin: 0;
+      color: #dcecff;
+      font-size: 18px;
+    }
+
+    .cta .btn-primary {
+      background: #ffffff;
+      color: #075da8;
+      box-shadow: none;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 34px 8%;
+      background: #071829;
+      color: #9fb1c7;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1000px) {
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .faq {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .cta {
+        padding: 36px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="hero">
-    <h1>河源宝蓝塑胶制品有限公司</h1>
-    <p>
-      专注一次性手套、独立包装手套、酒店用品及餐饮耗材的一站式供应，
-      支持定制包装、印刷和批量供货。
-    </p>
-  </div>
+  <nav class="nav">
+    <div class="logo">Baolan</div>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#custom">Custom Packaging</a>
+      <a href="#applications">Applications</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <div class="section">
-    <h2>关于我们</h2>
-    <p>
-      我们是一家一次性用品生产厂家，产品广泛应用于餐饮、酒店、食品加工、
-      清洁护理及零售包装场景。我们提供稳定供货、灵活定制和专业外贸服务。
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>主营产品</h2>
-    <div class="products">
-      <div class="card">
-        <h3>一次性PE手套</h3>
-        <p>透明、轻薄、适合餐饮和食品接触场景。</p>
-      </div>
-      <div class="card">
-        <h3>独立包装手套</h3>
-        <p>适合餐饮连锁、酒店、航空、外卖和零售渠道。</p>
-      </div>
-      <div class="card">
-        <h3>垃圾袋 / 围裙 / 浴帽</h3>
-        <p>支持多规格、多包装方式和定制印刷。</p>
-      </div>
-      <div class="card">
-        <h3>酒店及餐饮耗材</h3>
-        <p>提供一站式配套采购方案。</p>
+  <section class="hero">
+    <div>
+      <div class="badge">Disposable Gloves & Food Service Supplies Manufacturer</div>
+      <h1>Custom Disposable Gloves and Packaging Solutions for Food Service Brands</h1>
+      <p>
+        Baolan is a China-based disposable products manufacturer specializing in disposable PE gloves,
+        individually wrapped gloves, aprons, shower caps, trash bags, and customized packaging solutions
+        for restaurants, hotels, catering companies, distributors, and retail brands.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="mailto:edwin@cnbaolan.com">Request a Quote</a>
+        <a class="btn-secondary" href="#products">View Products</a>
       </div>
     </div>
-  </div>
 
-  <div class="section contact">
-    <h2>联系我们</h2>
-    <p>Email: edwin@cnbaolan.com</p>
-    <p>WhatsApp: 请填写你的 WhatsApp 号码</p>
-  </div>
+    <div class="hero-card">
+      <h3>Factory Capabilities</h3>
+      <p>
+        We support bulk orders, flexible packaging, logo printing, private label projects,
+        and one-stop disposable supply solutions for B2B customers.
+      </p>
+      <div class="stat-grid">
+        <div class="stat">
+          <strong>PE / TPE / CPE</strong>
+          Glove materials
+        </div>
+        <div class="stat">
+          <strong>Custom</strong>
+          Logo & packaging
+        </div>
+        <div class="stat">
+          <strong>B2B</strong>
+          Export supply
+        </div>
+        <div class="stat">
+          <strong>One-stop</strong>
+          Food service supplies
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="section-title">
+      <span>Product Categories</span>
+      <h2>Disposable products for restaurants, hotels, food processing and retail packaging</h2>
+      <p>
+        Our product range is designed for hygiene, convenience, single-use service scenarios,
+        and customized brand packaging.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>Disposable PE Gloves</h3>
+        <p>Lightweight transparent gloves for food handling, restaurants, takeout, and general hygiene use.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Individually Wrapped Gloves</h3>
+        <p>Single-use glove sachets for restaurant chains, hotels, airlines, catering, and retail service packs.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>Aprons & Shower Caps</h3>
+        <p>Disposable PE aprons, shower caps, and hygiene accessories with various packaging options.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">04</div>
+        <h3>Food Service Supplies</h3>
+        <p>Trash bags, table covers, steamer paper, food bags, and disposable supplies for one-stop procurement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white" id="custom">
+    <div class="split">
+      <div class="feature-box">
+        <h2>Custom printed packaging for your disposable products</h2>
+        <p>
+          We help customers turn ordinary disposable products into branded service items.
+          From single sachet packaging to retail packs, we support logo printing,
+          packaging layout, product matching, and bulk production.
+        </p>
+      </div>
+
+      <div class="list">
+        <div class="list-item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Logo and private label packaging</h3>
+            <p>Suitable for restaurant chains, hotels, distributors, and retail brands.</p>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Single-use sachet packaging</h3>
+            <p>Ideal for individually wrapped gloves, aprons, wet wipes, and hygiene kits.</p>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Multiple disposable product matching</h3>
+            <p>Combine gloves with food bags, aprons, table covers, trash bags, or cutlery packs.</p>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Export-oriented quotation support</h3>
+            <p>We can provide product specifications, packing details, carton information, and quotation support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="applications">
+    <div class="section-title">
+      <span>Applications</span>
+      <h2>Designed for real food service and hospitality scenarios</h2>
+      <p>
+        Our disposable gloves and related products are commonly used in food handling,
+        catering service, hotel rooms, takeaway packaging, cleaning, and retail hygiene packs.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">A</div>
+        <h3>Restaurant Chains</h3>
+        <p>Individually packed gloves and hygiene supplies for standardized service operations.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">B</div>
+        <h3>Hotels & Hospitality</h3>
+        <p>Guest-use disposable items including shower caps, gloves, hygiene kits, and trash bags.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">C</div>
+        <h3>Food Processing</h3>
+        <p>Disposable gloves and aprons for handling, packing, preparation, and cleaning processes.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">D</div>
+        <h3>Distributors</h3>
+        <p>Bulk supply and private label packaging for wholesalers, importers, and supply chain partners.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white" id="faq">
+    <div class="section-title">
+      <span>FAQ</span>
+      <h2>Common questions about disposable gloves and custom packaging</h2>
+      <p>
+        These answers help buyers understand product options, customization methods,
+        packaging choices, and B2B ordering basics.
+      </p>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h3>What are individually wrapped disposable gloves?</h3>
+        <p>
+          Individually wrapped disposable gloves are single-use gloves packed in separate sachets.
+          They are suitable for restaurants, hotels, airlines, catering service, takeout orders,
+          and hygiene kits.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can disposable glove packaging be customized?</h3>
+        <p>
+          Yes. Packaging can be customized with logos, brand colors, product instructions,
+          barcodes, and different sachet or retail pack formats depending on the order requirement.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between PE, TPE and CPE gloves?</h3>
+        <p>
+          PE gloves are lightweight and cost-effective. TPE gloves are softer and more elastic.
+          CPE gloves usually have a thicker embossed texture and are suitable for higher-strength use.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Who should buy from a disposable gloves manufacturer?</h3>
+        <p>
+          Restaurant chains, food service companies, hotels, distributors, importers,
+          packaging companies, and retail brands can benefit from direct factory supply
+          and customized disposable product solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div>
+      <h2>Looking for a disposable gloves manufacturer?</h2>
+      <p>
+        Contact Baolan for disposable PE gloves, individually wrapped gloves,
+        custom packaging, and one-stop food service disposable supplies.
+      </p>
+    </div>
+    <a class="btn-primary" href="mailto:edwin@cnbaolan.com">Contact Edwin</a>
+  </section>
+
+  <footer>
+    <div><strong>Baolan Disposable Products</strong> — Disposable gloves and food service supplies manufacturer.</div>
+    <div>Email: edwin@cnbaolan.com</div>
+  </footer>
 
 </body>
 </html>
