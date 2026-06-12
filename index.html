@@ -156,7 +156,11 @@
           </div>
         </div>
 
-        <form id="quoteForm" class="quote-form">
+        <form id="quoteForm" class="quote-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="5e09fa74-1da3-4b16-993f-a14a4d772608" />
+          <input type="hidden" name="subject" value="New Ready2BBQ Website Inquiry" />
+          <input type="hidden" name="from_name" value="Ready2BBQ Website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
           <div class="form-row">
             <label>Full Name<input type="text" name="name" required placeholder="Your name" /></label>
             <label>Company<input type="text" name="company" placeholder="Company name" /></label>
@@ -179,7 +183,7 @@
           </label>
           <label>Message<textarea name="message" rows="5" placeholder="Tell us your size, logo, destination and packaging requirements."></textarea></label>
           <button type="submit" class="btn primary full">Send Inquiry</button>
-          <p class="form-note">The button opens the buyer's email app and prepares an inquiry to Rita.</p>
+          <p id="formStatus" class="form-note">Submit directly to our sales inbox. We will reply as soon as possible.</p>
         </form>
       </div>
     </section>
