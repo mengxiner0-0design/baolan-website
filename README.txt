@@ -1,11 +1,17 @@
-餐饮耗材一站式采购网站 - Premium Blue Version
+Baolan Real Website
 
-使用方式：
-1. 解压文件夹。
-2. 直接双击 index.html 预览。
-3. 图片在 assets/images/ 目录中。
+This package is a real HTML/CSS/JS website, not a single image mockup.
 
-说明：
-- 本版本没有重新生成或修改产品图片内容。
-- 图片只是复制到网页项目中，并通过 HTML/CSS 做排版展示。
-- 网站主色调为蓝色，定位为餐饮耗材一站式采购与定制包装 B2B 官网。
+Structure:
+- index.html
+- styles.css
+- script.js
+- images/  (20 independent optimized WebP images)
+
+Design direction:
+- Apple-inspired clean storytelling
+- Blue and white premium B2B style
+- Full English website
+- Independent product images used as assets
+- No popups
+- No full-page screenshot-as-website approach

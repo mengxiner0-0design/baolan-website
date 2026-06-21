@@ -1,342 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baolan Supply | One-Stop Restaurant Supplies & Custom Packaging</title>
-  <meta name="description" content="One-stop restaurant disposable supplies and custom packaging for food service brands, takeaway businesses, hotels and central kitchens." />
-  <style>
-    :root{
-      --blue:#0066ff;
-      --blue-2:#0a84ff;
-      --navy:#06163f;
-      --ink:#0a1024;
-      --muted:#58647a;
-      --line:rgba(9,39,90,.12);
-      --soft:#f4f9ff;
-      --soft-2:#eaf4ff;
-      --glass:rgba(255,255,255,.78);
-      --shadow:0 34px 90px rgba(10,52,116,.14);
-      --shadow-soft:0 18px 60px rgba(10,52,116,.10);
-      --radius:34px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,"Segoe UI",Roboto,Arial,sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 80% 0%, rgba(0,102,255,.12), transparent 34rem),
-        linear-gradient(180deg,#fbfdff 0%,#f5f9ff 42%,#fff 100%);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:geometricPrecision;
-      overflow-x:hidden;
-    }
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    .nav-shell{
-      position:fixed;
-      top:20px;
-      left:50%;
-      transform:translateX(-50%);
-      width:min(1060px,calc(100vw - 32px));
-      z-index:50;
-      backdrop-filter:blur(24px);
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(10,84,190,.12);
-      border-radius:999px;
-      box-shadow:0 18px 60px rgba(29,89,170,.12);
-    }
-    .nav{
-      height:58px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-      padding:0 13px 0 16px;
-    }
-    .brand{display:flex;align-items:center;gap:10px;min-width:max-content}
-    .mark{
-      width:36px;height:36px;border-radius:13px;
-      background:linear-gradient(135deg,#0066ff,#0047bd);
-      color:#fff;font-weight:900;display:grid;place-items:center;
-      box-shadow:0 12px 28px rgba(0,102,255,.30);
-      letter-spacing:-.05em;
-    }
-    .brand strong{font-size:16px;letter-spacing:-.03em;display:block;line-height:1;color:#071b4d}
-    .brand span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#72809a;display:block;margin-top:3px;white-space:nowrap}
-    .links{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:650;color:#132143}
-    .quote-pill{
-      border:0;background:linear-gradient(135deg,#0066ff,#0050d8);color:white;border-radius:999px;
-      padding:13px 20px;font-weight:800;box-shadow:0 15px 38px rgba(0,102,255,.28);
-      white-space:nowrap;
-    }
-    .wrap{width:min(var(--max),calc(100vw - 48px));margin:0 auto}
-    .hero{min-height:100vh;padding:140px 0 70px;position:relative;isolation:isolate;overflow:hidden}
-    .hero:before{
-      content:"";position:absolute;inset:0;z-index:-2;
-      background-image:
-        linear-gradient(rgba(9,50,115,.055) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(9,50,115,.055) 1px,transparent 1px);
-      background-size:54px 54px;
-      mask-image:linear-gradient(to bottom,rgba(0,0,0,.45),transparent 78%);
-    }
-    .orb{position:absolute;border-radius:50%;filter:blur(2px);z-index:-1;opacity:.8}
-    .orb.one{width:620px;height:620px;background:radial-gradient(circle,rgba(0,102,255,.16),transparent 68%);right:-170px;top:85px}
-    .orb.two{width:420px;height:420px;background:radial-gradient(circle,rgba(87,161,255,.13),transparent 70%);left:-110px;bottom:80px}
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,102,255,.20);
-      background:rgba(237,246,255,.72);color:#0060e6;border-radius:999px;padding:8px 13px;
-      font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:900;
-    }
-    .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(0,102,255,.12)}
-    .hero-copy{text-align:center;margin:0 auto;max-width:930px}
-    h1{margin:26px 0 18px;font-size:clamp(64px,10vw,138px);line-height:.88;letter-spacing:-.075em;font-weight:900;color:#050b1f}
-    .blue-word{display:block;color:var(--blue);background:linear-gradient(100deg,#06163f 0%,#0057df 45%,#0a84ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{font-size:clamp(18px,2vw,24px);line-height:1.5;color:#3f4b62;max-width:760px;margin:0 auto}
-    .cta-row{display:flex;justify-content:center;gap:14px;margin-top:32px;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
-      font-size:15px;font-weight:850;padding:16px 25px;border:1px solid transparent;
-      transition:.25s ease;cursor:pointer;
-    }
-    .btn.primary{background:var(--blue);color:#fff;box-shadow:0 16px 40px rgba(0,102,255,.25)}
-    .btn.secondary{background:rgba(255,255,255,.75);border-color:rgba(0,102,255,.18);color:#0057d9;box-shadow:0 12px 30px rgba(14,66,124,.08)}
-    .btn:hover{transform:translateY(-2px)}
-    .hero-stage{margin:62px auto 0;max-width:1120px;position:relative;padding:0 4px}
-    .stage-card{
-      position:relative;border-radius:48px;overflow:hidden;background:rgba(255,255,255,.68);border:1px solid rgba(0,102,255,.12);
-      box-shadow:var(--shadow);padding:18px;
-    }
-    .stage-card:before{content:"";position:absolute;inset:-2px;background:radial-gradient(circle at 20% 0%,rgba(0,102,255,.18),transparent 42%),linear-gradient(120deg,transparent,rgba(0,102,255,.05));pointer-events:none}
-    .stage-main{position:relative;border-radius:34px;overflow:hidden;background:#fff}
-    .stage-main img{width:100%;max-height:520px;object-fit:cover;object-position:center}
-    .floating-note{
-      position:absolute;right:34px;bottom:30px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);
-      border:1px solid rgba(0,102,255,.12);border-radius:26px;padding:17px 20px;box-shadow:0 18px 45px rgba(8,41,92,.14);
-      display:flex;align-items:center;gap:12px;max-width:330px;
-    }
-    .floating-note b{display:block;color:#071b4d;font-size:15px;margin-bottom:4px}.floating-note span{font-size:12px;color:#61708a;line-height:1.35}.mini-mark{width:39px;height:39px;border-radius:14px;background:#edf6ff;color:#0066ff;display:grid;place-items:center;font-weight:900}
-    .section{padding:110px 0;position:relative;overflow:hidden}.section.tight{padding:76px 0}
-    .center{text-align:center}.section-title{font-size:clamp(42px,5vw,78px);line-height:.95;letter-spacing:-.06em;font-weight:900;margin:18px 0 18px;color:#06163f}.section-sub{font-size:19px;line-height:1.55;color:#58647a;max-width:720px;margin:0 auto}
-    .range-frame{margin-top:50px;border-radius:44px;padding:18px;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(232,244,255,.62));box-shadow:var(--shadow);border:1px solid rgba(0,102,255,.13)}
-    .range-frame img{border-radius:30px;width:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
-    .dark-range{background:#050b1f;color:#fff;border-radius:64px;padding:74px 60px;position:relative;overflow:hidden;box-shadow:0 38px 110px rgba(0,0,0,.25)}
-    .dark-range:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 20% 10%,rgba(0,102,255,.42),transparent 35%),radial-gradient(circle at 100% 0%,rgba(45,157,255,.24),transparent 38%);opacity:.85}
-    .dark-range > *{position:relative}.range-head{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:end;margin-bottom:48px}.range-head h2{font-size:clamp(44px,6vw,90px);line-height:.9;letter-spacing:-.07em;margin:0}.range-head p{color:#b8c7e6;font-size:20px;line-height:1.5;margin:0}
-    .category-cloud{display:flex;flex-wrap:wrap;gap:12px}.cat{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.08);backdrop-filter:blur(16px);border-radius:999px;padding:13px 17px;font-weight:800;color:#f3f7ff;font-size:14px}.cat:nth-child(3n){background:rgba(0,102,255,.22)}
-    .story-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:stretch}.story-text{grid-column:span 5;display:flex;flex-direction:column;justify-content:center}.story-media{grid-column:span 7}.kicker{font-size:13px;font-weight:900;color:#0066ff;letter-spacing:.13em;text-transform:uppercase}.story-title{font-size:clamp(46px,6vw,92px);line-height:.92;letter-spacing:-.07em;font-weight:900;margin:14px 0 22px;color:#06163f}.story-copy{font-size:19px;color:#58647a;line-height:1.6;margin:0 0 28px}.media-panel{border-radius:44px;overflow:hidden;background:#fff;box-shadow:var(--shadow);border:1px solid rgba(0,102,255,.12);position:relative}.media-panel img{width:100%;height:100%;object-fit:cover}.media-panel.contain img{object-fit:contain;background:#fff}.two-stack{display:grid;grid-template-rows:1fr .72fr;gap:24px;height:100%}.split-img{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .glass-list{display:grid;gap:12px;margin-top:20px}.glass-list span{display:flex;align-items:center;gap:10px;color:#263653;font-weight:750}.check{width:20px;height:20px;border-radius:50%;background:#e8f3ff;color:#0066ff;display:grid;place-items:center;font-size:12px;font-weight:900}
-    .showcase{background:#fff}.product-strip{display:grid;grid-template-columns:1.35fr .8fr;gap:26px;align-items:center}.showcase-copy{padding:58px;border-radius:54px;background:linear-gradient(135deg,#f3f9ff,#fff);border:1px solid rgba(0,102,255,.12);box-shadow:var(--shadow-soft)}.showcase-copy h2{font-size:clamp(48px,6vw,94px);line-height:.92;letter-spacing:-.07em;margin:0 0 22px}.showcase-copy p{font-size:20px;color:#56647d;line-height:1.55;margin:0}.showcase-image{border-radius:54px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(0,102,255,.12);background:#fff}.showcase-image img{width:100%;height:100%;object-fit:cover}
-    .grill-section{padding:0;background:#06163f}.grill-wrap{min-height:720px;position:relative;display:grid;align-items:end;overflow:hidden}.grill-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}.grill-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,10,28,.88),rgba(3,10,28,.28) 50%,rgba(3,10,28,.08)),linear-gradient(0deg,rgba(3,10,28,.58),transparent 42%)}.grill-copy{position:relative;z-index:2;width:min(680px,calc(100vw - 48px));margin:0 auto 78px 8vw;color:white}.grill-copy h2{font-size:clamp(54px,7vw,112px);line-height:.88;letter-spacing:-.08em;margin:14px 0}.grill-copy p{font-size:20px;color:#d8e7ff;line-height:1.55;max-width:600px}.white-pill{display:inline-flex;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(16px);padding:10px 14px;border-radius:999px;font-weight:900;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#d9eaff}
-    .custom-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.custom-card{border-radius:54px;padding:50px;background:#fff;border:1px solid rgba(0,102,255,.12);box-shadow:var(--shadow-soft);overflow:hidden}.custom-card.image{padding:0}.custom-card.image img{width:100%;height:100%;object-fit:cover}.custom-card h2{font-size:clamp(44px,5vw,78px);line-height:.95;letter-spacing:-.06em;margin:0 0 18px}.feature-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.feature-pills span{padding:12px 14px;border-radius:999px;background:#f0f7ff;color:#0058d8;font-weight:850;font-size:13px}
-    .gallery-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;grid-auto-rows:230px;gap:22px;margin-top:42px}.gallery-item{border-radius:34px;overflow:hidden;position:relative;box-shadow:var(--shadow-soft);background:#fff;border:1px solid rgba(0,102,255,.10)}.gallery-item.big{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover}.gallery-label{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:10px 14px;font-weight:900;font-size:13px;color:#06163f}
-    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}.why-card{background:rgba(255,255,255,.76);border:1px solid rgba(0,102,255,.12);border-radius:28px;padding:28px;box-shadow:0 12px 38px rgba(8,45,104,.07)}.why-card b{font-size:18px;color:#06163f}.why-card p{color:#64708a;line-height:1.5;margin:8px 0 0;font-size:14px}.why-icon{font-size:28px;margin-bottom:18px}
-    .cta{padding:95px 0 110px;background:linear-gradient(135deg,#eef6ff,#fff 48%,#eaf5ff);position:relative;overflow:hidden}.cta:before{content:"";position:absolute;right:-120px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,102,255,.18),transparent 70%)}.form-shell{display:grid;grid-template-columns:.82fr 1.18fr;gap:36px;align-items:center}.form-copy h2{font-size:clamp(48px,6vw,92px);line-height:.9;letter-spacing:-.07em;margin:0 0 18px;color:#06163f}.form-copy p{font-size:20px;color:#58647a;line-height:1.55}.form{background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border:1px solid rgba(0,102,255,.13);border-radius:38px;padding:25px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:14px}.form label{display:grid;gap:8px;color:#24314a;font-weight:850;font-size:12px}.form input,.form select,.form textarea{width:100%;border:1px solid rgba(17,64,129,.13);background:#fff;border-radius:16px;padding:15px 14px;font:inherit;color:#0d1830;outline:none}.form textarea{min-height:110px;resize:vertical}.span-2{grid-column:span 2}.submit{grid-column:span 2;border:0;background:var(--blue);color:#fff;border-radius:18px;padding:17px 20px;font-weight:900;font-size:15px;box-shadow:0 15px 35px rgba(0,102,255,.22)}
-    footer{padding:34px 0;color:#77849b;font-size:13px;background:#fff;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.small-links{display:flex;gap:20px;color:#42506a}
-    @media (max-width:900px){
-      .nav-shell{top:10px;width:calc(100vw - 20px);border-radius:24px}.nav{height:auto;padding:11px;align-items:flex-start}.links{display:none}.brand span{font-size:8px}.quote-pill{padding:11px 14px}
-      .wrap{width:min(var(--max),calc(100vw - 28px))}.hero{padding:104px 0 46px}.hero-stage{margin-top:38px}.stage-card{border-radius:34px;padding:10px}.stage-main{border-radius:25px}.floating-note{position:static;margin:14px;background:white;max-width:none}
-      .section{padding:72px 0}.section-title{font-size:46px}.range-head{grid-template-columns:1fr}.dark-range{border-radius:40px;padding:46px 26px}.story-grid,.product-strip,.custom-grid,.form-shell{grid-template-columns:1fr}.story-text,.story-media{grid-column:auto}.story-title,.showcase-copy h2,.custom-card h2,.form-copy h2{font-size:50px}.story-media{min-height:auto}.two-stack{height:auto}.media-panel img{height:auto;object-fit:contain}.split-img{grid-template-columns:1fr}.grill-wrap{min-height:650px}.grill-copy{margin:0 auto 48px}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:auto}.gallery-item,.gallery-item.big{grid-row:auto}.gallery-item img{height:auto;object-fit:contain}.why{grid-template-columns:1fr}.form{grid-template-columns:1fr}.span-2,.submit{grid-column:auto}h1{font-size:64px}.lead{font-size:17px}
-    }
-  </style>
+  <meta name="description" content="One-stop restaurant supplies and custom packaging for gloves, wet wipes, aprons, takeaway bags, steamer paper, table covers, napkins, meal kits, belly bands, labels and disposable grill sets." />
+  <link rel="preload" as="image" href="images/01-hero-supply-system.webp" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav-shell" aria-label="Main navigation">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Baolan Supply home">
+      <span class="brand-mark">B</span>
+      <span>
+        <strong>Baolan Supply</strong>
+        <small>Restaurant Disposable & Packaging Solutions</small>
+      </span>
+    </a>
     <nav class="nav">
-      <a class="brand" href="#top" aria-label="Baolan Supply home">
-        <span class="mark">B</span>
-        <span><strong>Baolan Supply</strong><span>Restaurant Disposable & Packaging Solutions</span></span>
-      </a>
-      <div class="links" aria-label="Navigation links">
-        <a href="#range">Products</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#custom">Custom Packaging</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#why">Why Us</a>
-      </div>
-      <a class="quote-pill" href="#quote">Get Quote</a>
+      <a href="#products">Products</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#custom">Custom</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#quote" class="nav-quote">Get Quote</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero" aria-label="Hero">
-      <span class="orb one"></span><span class="orb two"></span>
-      <div class="wrap hero-copy">
-        <span class="eyebrow"><i class="dot"></i> One-stop food service sourcing</span>
-        <h1>Restaurant supplies.<span class="blue-word">All in one place.</span></h1>
-        <p class="lead">Source gloves, wet wipes, aprons, takeaway bags, steam paper, table covers, napkins, meal kits, belly bands, labels and disposable grill sets from one reliable supplier.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="#range">Explore product range <span>→</span></a>
-          <a class="btn secondary" href="#quote">Request a quote <span>→</span></a>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">One-stop restaurant supply system</p>
+        <h1>Restaurant supplies.<br><span>All in one place.</span></h1>
+        <p class="hero-text">Gloves, wet wipes, aprons, takeaway bags, steamer paper, table covers, napkins, meal kits, belly bands, labels and disposable grill sets — sourced as one clean B2B supply system.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn primary">Explore Products</a>
+          <a href="#quote" class="btn ghost">Request Quote</a>
         </div>
       </div>
-      <div class="wrap hero-stage" aria-label="One stop supply image">
-        <div class="stage-card">
-          <div class="stage-main">
-            <img src="assets/images/one-stop-overview.jpg" alt="One-stop disposable supplies overview with individually packed gloves and food service categories" />
+
+      <div class="hero-visual reveal" aria-label="One-stop restaurant supplies hero visual">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <picture class="hero-image">
+          <img src="images/01-hero-supply-system.webp" alt="Premium restaurant supply products arranged in blue and white style" />
+        </picture>
+        <div class="floating-note note-a">Hygiene</div>
+        <div class="floating-note note-b">Packaging</div>
+        <div class="floating-note note-c">Meal Kits</div>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <span>Disposable Gloves</span>
+      <span>Wet Wipes</span>
+      <span>Aprons</span>
+      <span>Takeaway Bags</span>
+      <span>Steamer Paper</span>
+      <span>Table Covers</span>
+      <span>Napkins</span>
+      <span>Meal Kits</span>
+      <span>Belly Bands</span>
+      <span>Labels</span>
+      <span>Disposable Grill Sets</span>
+    </section>
+
+    <section class="section product-system" id="products">
+      <div class="section-head reveal">
+        <p class="eyebrow">Product Range</p>
+        <h2>One sourcing plan. Eleven essential categories.</h2>
+        <p>Each category is presented as a real web component, not a flat screenshot. Images stay independent in the <code>images</code> folder and the website layout is handled by HTML and CSS.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <img src="images/02-gloves.webp" alt="Disposable food service gloves" loading="lazy">
+          <div><span>01</span><h3>Disposable Gloves</h3><p>PE, TPE and nitrile glove options for food handling, takeaway and kitchen hygiene.</p></div>
+        </article>
+        <article class="product-card tall reveal">
+          <img src="images/03-wet-wipes.webp" alt="Individually packed wet wipes" loading="lazy">
+          <div><span>02</span><h3>Wet Wipes</h3><p>Individually packed and soft-pack wet wipes for restaurants, hotels and delivery meals.</p></div>
+        </article>
+        <article class="product-card reveal">
+          <img src="images/04-aprons.webp" alt="Disposable aprons" loading="lazy">
+          <div><span>03</span><h3>Aprons</h3><p>Lightweight disposable aprons for food prep, back-of-house cleaning and service teams.</p></div>
+        </article>
+        <article class="product-card wide reveal">
+          <img src="images/05-takeaway-bags.webp" alt="Takeaway bags and food containers" loading="lazy">
+          <div><span>04</span><h3>Takeaway Bags</h3><p>Paper bags, containers and carry-out packaging for modern delivery operations.</p></div>
+        </article>
+        <article class="product-card reveal">
+          <img src="images/06-steamer-paper.webp" alt="Steamer paper" loading="lazy">
+          <div><span>05</span><h3>Steamer Paper</h3><p>Food-grade steamer paper for dim sum, buns, bamboo steamers and hot kitchens.</p></div>
+        </article>
+        <article class="product-card reveal">
+          <img src="images/07-table-covers.webp" alt="Premium table covers" loading="lazy">
+          <div><span>06</span><h3>Table Covers</h3><p>Disposable table covers that keep dining areas clean, fast to reset and consistent.</p></div>
+        </article>
+        <article class="product-card reveal">
+          <img src="images/08-napkins.webp" alt="Napkins" loading="lazy">
+          <div><span>07</span><h3>Napkins</h3><p>Absorbent napkins and dining paper products for restaurants, cafés and meal kits.</p></div>
+        </article>
+        <article class="product-card wide reveal">
+          <img src="images/09-meal-kits.webp" alt="Meal kits and food containers" loading="lazy">
+          <div><span>08</span><h3>Meal Kits</h3><p>Food container systems for takeaway, delivery, ready-to-cook packages and catering sets.</p></div>
+        </article>
+        <article class="product-card reveal">
+          <img src="images/10-belly-bands.webp" alt="Custom belly bands" loading="lazy">
+          <div><span>09</span><h3>Belly Bands</h3><p>Printed sleeves for boxes and bowls that improve sealing, branding and presentation.</p></div>
+        </article>
+        <article class="product-card reveal">
+          <img src="images/11-labels.webp" alt="Custom labels and sealing stickers" loading="lazy">
+          <div><span>10</span><h3>Labels</h3><p>Custom labels and sealing stickers for packaging identity, order clarity and product finish.</p></div>
+        </article>
+        <article class="product-card tall reveal">
+          <img src="images/12-disposable-grill.webp" alt="Disposable grill sets" loading="lazy">
+          <div><span>11</span><h3>Disposable Grill Sets</h3><p>Disposable grill trays and accessories for outdoor dining, BBQ kits and food-service events.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section story" id="solutions">
+      <div class="story-copy reveal">
+        <p class="eyebrow">Food Service Solutions</p>
+        <h2>Built around real restaurant operating moments.</h2>
+        <p>Instead of simply listing products, the site tells a supply story: hygiene essentials for daily service, takeaway packaging for delivery, and specialty sets for new dining experiences.</p>
+      </div>
+      <div class="story-layout">
+        <article class="story-panel hygiene reveal">
+          <div>
+            <p class="eyebrow">01 / Hygiene</p>
+            <h3>Clean service starts with daily essentials.</h3>
+            <p>Gloves, wet wipes, aprons and napkins create the hygiene layer your team and customers interact with every day.</p>
           </div>
-          <div class="floating-note" aria-label="Supply scope note">
-            <span class="mini-mark">11</span>
-            <span><b>Core categories, one supplier.</b><span>Built for restaurants, takeaway brands, hotels, central kitchens and food processing teams.</span></span>
+          <img src="images/15-delivery-scene.webp" alt="Restaurant service and hygiene supplies" loading="lazy">
+        </article>
+        <article class="story-panel packaging reveal">
+          <img src="images/13-custom-packaging.webp" alt="Custom packaging solutions" loading="lazy">
+          <div>
+            <p class="eyebrow">02 / Packaging</p>
+            <h3>Make every takeaway touchpoint feel consistent.</h3>
+            <p>From bags and boxes to labels and sleeves, packaging can carry your brand without slowing down operations.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="range" aria-label="Complete product range">
-      <div class="wrap center">
-        <span class="eyebrow"><i class="dot"></i> Complete product system</span>
-        <h2 class="section-title">A full disposable supply range.<br>Presented clearly.</h2>
-        <p class="section-sub">A complete supply system for restaurants, hotels, takeaway brands, central kitchens and food processing businesses.</p>
-        <div class="range-frame">
-          <img src="assets/images/complete-consumables-range.png" alt="Complete disposable consumables range banner for food service supplies" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section tight" aria-label="Product categories">
-      <div class="wrap dark-range">
-        <div class="range-head">
-          <h2>Eleven essentials.<br>One sourcing plan.</h2>
-          <p>Instead of sourcing every item separately, match daily hygiene supplies, takeaway packaging, custom branding materials and special meal kit products through one coordinated supply system.</p>
-        </div>
-        <div class="category-cloud" aria-label="Product category list">
-          <span class="cat">Disposable Gloves</span>
-          <span class="cat">Wet Wipes</span>
-          <span class="cat">Aprons</span>
-          <span class="cat">Takeaway Bags</span>
-          <span class="cat">Steam Paper</span>
-          <span class="cat">Table Covers</span>
-          <span class="cat">Napkins</span>
-          <span class="cat">Meal Kits</span>
-          <span class="cat">Belly Bands</span>
-          <span class="cat">Labels</span>
-          <span class="cat">Disposable Grill Sets</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="solutions" aria-label="Hygiene and protection solution">
-      <div class="wrap story-grid">
-        <div class="story-text">
-          <span class="kicker">Hygiene & Protection</span>
-          <h2 class="story-title">Clean, safe, ready for every shift.</h2>
-          <p class="story-copy">Disposable gloves, wet wipes, aprons and napkins help keep food handling, customer dining, kitchen use and takeaway orders clean and consistent.</p>
-          <div class="glass-list">
-            <span><i class="check">✓</i> PE, TPE and nitrile glove options</span>
-            <span><i class="check">✓</i> Individually packed wipes for dining and delivery</span>
-            <span><i class="check">✓</i> Daily restaurant use, hotel use and food service operations</span>
+        </article>
+        <article class="story-panel grill reveal">
+          <div>
+            <p class="eyebrow">03 / Specialty Sets</p>
+            <h3>Disposable grill sets for new dining experiences.</h3>
+            <p>Use complete grill and meal-kit solutions for BBQ restaurants, outdoor dining, picnic packages and ready-to-cook food service.</p>
           </div>
-        </div>
-        <div class="story-media two-stack">
-          <div class="media-panel contain"><img src="assets/images/gloves-types.jpg" alt="PE TPE and nitrile disposable gloves" /></div>
-          <div class="split-img">
-            <div class="media-panel"><img src="assets/images/wet-wipes-colorful.png" alt="Colorful individually packed wet wipes" /></div>
-            <div class="media-panel"><img src="assets/images/fast-food-gloves.png" alt="Individually packed PE gloves for fast food and takeaway" /></div>
-          </div>
-        </div>
+          <img src="images/12-disposable-grill.webp" alt="Disposable grill sets and meal kit essentials" loading="lazy">
+        </article>
       </div>
     </section>
 
-    <section class="section showcase" aria-label="Takeaway packaging solution">
-      <div class="wrap product-strip">
-        <div class="showcase-copy">
-          <span class="kicker">Takeaway & Brand Packaging</span>
-          <h2>Packaging that carries your brand.</h2>
-          <p>Build a consistent food service identity across takeaway bags, food boxes, cups, napkins, meal kits, belly bands and labels. Your logo, your artwork, your size — matched for your restaurant operation.</p>
-          <div class="cta-row" style="justify-content:flex-start;margin-top:30px"><a class="btn primary" href="#custom">See customization <span>→</span></a></div>
+    <section class="section custom" id="custom">
+      <div class="custom-main reveal">
+        <p class="eyebrow">OEM & Private Label</p>
+        <h2>Your logo. Your packaging. One consistent system.</h2>
+        <p>Build a unified look across gloves, wipes, bags, boxes, napkins, labels, sleeves and food-service kits.</p>
+        <div class="custom-steps">
+          <div><span>01</span><strong>Plain Packaging</strong><small>Start with clean stock packaging.</small></div>
+          <div><span>02</span><strong>Logo Printing</strong><small>Add your identity to key touchpoints.</small></div>
+          <div><span>03</span><strong>Labels & Sleeves</strong><small>Use stickers, belly bands and sealing labels.</small></div>
+          <div><span>04</span><strong>Full Customization</strong><small>Scale into a complete branded supply system.</small></div>
         </div>
-        <div class="showcase-image"><img src="assets/images/kraft-packaging-set.png" alt="Kraft takeaway packaging set with bags boxes and cups" /></div>
+      </div>
+      <div class="custom-visual reveal">
+        <img src="images/16-oem-process.webp" alt="OEM private label process" loading="lazy">
       </div>
     </section>
 
-    <section class="grill-section" aria-label="Disposable grill and meal kit solution">
-      <div class="grill-wrap">
-        <img src="assets/images/disposable-grill-lifestyle.png" alt="Disposable charcoal grill bento box meal kit lifestyle scene" />
-        <div class="grill-copy">
-          <span class="white-pill">Disposable Grill & Meal Kit Solutions</span>
-          <h2>A new way to package dining experiences.</h2>
-          <p>Suitable for BBQ restaurants, outdoor dining, hot pot sets, picnic meals and ready-to-cook food service packages, with custom logo printing, instruction panels and branded outer packaging available.</p>
-          <a class="btn primary" href="#quote">Discuss your project <span>→</span></a>
-        </div>
+    <section class="section brand-section">
+      <div class="brand-showcase reveal">
+        <img src="images/14-brand-showcase.webp" alt="Brand showcase across packaging products" loading="lazy">
+      </div>
+      <div class="brand-copy reveal">
+        <p class="eyebrow">Brand Showcase</p>
+        <h2>From supply item to brand experience.</h2>
+        <p>When packaging, hygiene items and table-service consumables share the same visual system, even simple disposable products feel more professional.</p>
+        <a href="#quote" class="btn primary">Start a Custom Project</a>
       </div>
     </section>
 
-    <section class="section" id="custom" aria-label="Custom packaging">
-      <div class="wrap custom-grid">
-        <div class="custom-card">
-          <span class="kicker">Custom Packaging / OEM</span>
-          <h2>Your logo. Your packaging. Your food service system.</h2>
-          <p class="story-copy">Create a unified brand presence across glove packs, wet wipes, bags, food boxes, cups, labels, belly bands and sleeves.</p>
-          <div class="feature-pills">
-            <span>Logo Printing</span><span>Custom Artwork</span><span>Belly Bands</span><span>Sealing Labels</span><span>Custom Size</span><span>Private Label Packaging</span>
-          </div>
-          <div class="cta-row" style="justify-content:flex-start;margin-top:34px"><a class="btn primary" href="#quote">Start a custom project <span>→</span></a></div>
-        </div>
-        <div class="custom-card image"><img src="assets/images/blue-custom-packaging.png" alt="Blue custom branded coffee and takeaway packaging" /></div>
-        <div class="custom-card image"><img src="assets/images/custom-sleeves-labels.png" alt="Custom packaging sleeves and belly band samples" /></div>
-        <div class="custom-card image"><img src="assets/images/hot-fresh-belly-bands.png" alt="Hot and fresh belly bands on takeaway boxes" /></div>
+    <section class="section gallery" id="gallery">
+      <div class="section-head reveal">
+        <p class="eyebrow">Image Assets</p>
+        <h2>20 independent images in the images folder.</h2>
+        <p>The website uses optimized product images separately. They are not baked into one large web screenshot.</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="images/17-clean-background.webp" alt="Minimal blue background visual" loading="lazy">
+        <img src="images/18-product-range.webp" alt="All-in-one product range" loading="lazy">
+        <img src="images/19-custom-label-roll.webp" alt="Custom label roll" loading="lazy">
+        <img src="images/20-packaging-detail.webp" alt="Packaging detail" loading="lazy">
+        <img src="images/03-wet-wipes.webp" alt="Wet wipes" loading="lazy">
+        <img src="images/06-steamer-paper.webp" alt="Steamer paper" loading="lazy">
+        <img src="images/07-table-covers.webp" alt="Table covers" loading="lazy">
+        <img src="images/12-disposable-grill.webp" alt="Disposable grill" loading="lazy">
       </div>
     </section>
 
-    <section class="section" id="gallery" aria-label="Product gallery preview">
-      <div class="wrap center">
-        <span class="eyebrow"><i class="dot"></i> Product Gallery Preview</span>
-        <h2 class="section-title">Selected applications,<br>not a photo wall.</h2>
-        <p class="section-sub">Grouped by real food service use cases so buyers can quickly understand how each product fits their restaurant supply project.</p>
-        <div class="gallery-grid">
-          <div class="gallery-item big"><img src="assets/images/wet-wipes-outdoor.png" alt="Individually packed wet wipes outdoor scene" /><span class="gallery-label">Gloves & Wipes</span></div>
-          <div class="gallery-item"><img src="assets/images/kraft-bags.png" alt="Kraft takeaway bags with handles" /><span class="gallery-label">Takeaway Bags</span></div>
-          <div class="gallery-item"><img src="assets/images/orange-custom-packaging.png" alt="Orange custom coffee and dining packaging" /><span class="gallery-label">Brand Cases</span></div>
-          <div class="gallery-item"><img src="assets/images/pe-gloves-pack.png" alt="PE gloves disposable packaging" /><span class="gallery-label">Packed Gloves</span></div>
-          <div class="gallery-item big"><img src="assets/images/disposable-grill-kit.jpg" alt="Disposable grill kit on white background" /><span class="gallery-label">Disposable Grill Sets</span></div>
-        </div>
+    <section class="quote-section" id="quote">
+      <div class="quote-background">
+        <img src="images/17-clean-background.webp" alt="" loading="lazy">
       </div>
-    </section>
-
-    <section class="section tight" id="why" aria-label="Why work with us">
-      <div class="wrap center">
-        <span class="eyebrow"><i class="dot"></i> Why work with us</span>
-        <h2 class="section-title">Built for B2B food service sourcing.</h2>
-        <div class="why">
-          <div class="why-card"><div class="why-icon">📦</div><b>One-Stop Sourcing</b><p>Match disposable products and packaging solutions from one supply partner.</p></div>
-          <div class="why-card"><div class="why-icon">👨‍🍳</div><b>Food Service Experience</b><p>Product combinations designed around restaurant, hotel and takeaway use.</p></div>
-          <div class="why-card"><div class="why-icon">🏷️</div><b>OEM & Private Label</b><p>Support for logo printing, artwork customization, sleeves and labels.</p></div>
-          <div class="why-card"><div class="why-icon">🛡️</div><b>Stable Supply</b><p>Bulk order planning for long-term supply and consistent procurement.</p></div>
-          <div class="why-card"><div class="why-icon">⚡</div><b>Fast Quotation</b><p>Clear communication for product matching, quantity and packaging needs.</p></div>
-          <div class="why-card"><div class="why-icon">🌍</div><b>Global Delivery</b><p>Suitable for international buyers, food service distributors and chain brands.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="quote" aria-label="Inquiry form">
-      <div class="wrap form-shell">
-        <div class="form-copy">
-          <span class="eyebrow"><i class="dot"></i> Get quote</span>
-          <h2>Tell us what you need.</h2>
-          <p>Share your product list, quantity, packaging style and customization requirements. We will help match suitable restaurant disposable supplies and prepare a quotation.</p>
-        </div>
-        <form class="form" action="mailto:edwinlanzhiwei@gmail.com" method="post" enctype="text/plain">
-          <label>Name*<input name="name" placeholder="Your name" required></label>
-          <label>Company*<input name="company" placeholder="Your company" required></label>
-          <label>Email*<input type="email" name="email" placeholder="Your email" required></label>
-          <label>Country*<input name="country" placeholder="Country / region" required></label>
-          <label>Product Interest*<select name="product_interest" required><option value="">Select product</option><option>Disposable Gloves</option><option>Wet Wipes</option><option>Takeaway Packaging</option><option>Meal Kits</option><option>Belly Bands & Labels</option><option>Disposable Grill Sets</option><option>One-Stop Product List</option></select></label>
-          <label>Quantity*<input name="quantity" placeholder="Estimated quantity" required></label>
-          <label class="span-2">Message<textarea name="message" placeholder="Tell us more about your needs..."></textarea></label>
-          <button class="submit" type="submit">Send Inquiry →</button>
+      <div class="quote-content reveal">
+        <p class="eyebrow">Request a Quote</p>
+        <h2>Tell us your product list.</h2>
+        <p>Share the product categories, quantity, packaging style and customization requirements. We will help match the right restaurant disposable supply plan.</p>
+        <form class="quote-form">
+          <input type="text" placeholder="Name" aria-label="Name">
+          <input type="text" placeholder="Company" aria-label="Company">
+          <input type="email" placeholder="Email" aria-label="Email">
+          <select aria-label="Product interest">
+            <option>Product Interest</option>
+            <option>Disposable Gloves</option>
+            <option>Wet Wipes</option>
+            <option>Aprons</option>
+            <option>Takeaway Packaging</option>
+            <option>Steamer Paper</option>
+            <option>Table Covers / Napkins</option>
+            <option>Meal Kits / Grill Sets</option>
+            <option>Custom Labels / Belly Bands</option>
+          </select>
+          <textarea placeholder="Tell us about quantity, packaging and customization requirements." aria-label="Message"></textarea>
+          <button type="button" class="btn primary">Send Inquiry</button>
         </form>
       </div>
     </section>
   </main>
-  <footer>
-    <div class="wrap footer-row">
-      <span>© 2026 Baolan Supply. Restaurant Disposable & Packaging Solutions.</span>
-      <span class="small-links"><a href="#range">Products</a><a href="#custom">Custom Packaging</a><a href="#quote">Contact</a></span>
-    </div>
+
+  <footer class="footer">
+    <span>Baolan Supply</span>
+    <span>One-stop restaurant disposable & packaging solutions.</span>
+    <span>© 2026</span>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
