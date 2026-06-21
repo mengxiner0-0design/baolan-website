@@ -1,12 +1,47 @@
-# BluePack Supply 蓝色版官网
+# Baolan One-Stop Foodservice Website
 
-这是基于用户上传的 `index(1).html` 修改的静态网站版本。
+A static, GitHub Pages-ready website for one-stop restaurant / foodservice procurement.
 
-修改内容：
-- 保留原网站结构：Header、Hero、产品体系、场景方案、包装定制、供应能力、流程、询价表单、Footer。
-- 网站主色调改为蓝色 B2B 工厂官网风格。
-- 10 张上传产品图全部整理进首页产品体系。
-- 图片做了网页适配：提亮、增强清晰度、统一卡片比例和蓝白背景。
-- 可直接打开 `index.html` 预览。
+## Structure
 
-后续可继续接入邮箱、WhatsApp、企业微信机器人或 CRM。
+```text
+baolan-one-stop-site/
+├── index.html
+├── styles.css
+├── app.js
+├── README.md
+└── images/
+    ├── hero-visual.svg
+    ├── product-category.svg
+    ├── pe-gloves.svg
+    ├── wet-wipes.svg
+    ├── apron.svg
+    ├── takeaway-bag.svg
+    ├── steamer-paper.svg
+    ├── tablecloth.svg
+    ├── napkin.svg
+    ├── disposable-grill.svg
+    ├── cutlery-pack.svg
+    ├── belly-band.svg
+    ├── labels.svg
+    ├── custom-packaging.svg
+    ├── restaurant-scene.svg
+    ├── brand-display.svg
+    ├── quote-background.svg
+    ├── paper-cup.svg
+    ├── chef-hat.svg
+    └── eco-packaging.svg
+```
+
+## How to use
+
+1. Open `index.html` directly in a browser.
+2. Replace any SVG in `images/` with your real product image using the same filename.
+3. Upload the folder to GitHub Pages / Netlify / Vercel.
+
+## Notes
+
+- No external libraries.
+- Responsive layout.
+- Apple-style blue-white minimalist design.
+- Images are independent assets, not a single full-page image.

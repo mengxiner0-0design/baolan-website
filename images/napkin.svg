@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Napkins</title>
+  <desc id="desc">Soft restaurant tissue</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset=".55" stop-color="#edf6ff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dff0ff"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#075aaf" flood-opacity=".16"/>
+    </filter>
+    <radialGradient id="orb" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#73b9ff" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#73b9ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="520" rx="46" fill="url(#bg)"/>
+  <circle cx="610" cy="86" r="148" fill="url(#orb)"/>
+  <circle cx="94" cy="430" r="130" fill="#cfe7ff" opacity=".32"/>
+  
+        <g filter="url(#soft)">
+          <rect x="234" y="122" width="260" height="260" rx="34" fill="#fff" stroke="#d7eaff" stroke-width="6"/>
+          <path d="M264 156h200v200H264z" fill="#eef7ff"/>
+          <path d="M264 156l200 200M464 156L264 356" stroke="#0a6fdc" stroke-width="8" opacity=".35"/>
+          <path d="M302 257h124" stroke="#0a6fdc" stroke-width="14" stroke-linecap="round" opacity=".65"/>
+        </g>
+        
+  <g font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="58" y="448" fill="#071b33" font-size="31" font-weight="760" letter-spacing="-.8">Napkins</text>
+    <text x="58" y="482" fill="#58708a" font-size="18" font-weight="520">Soft restaurant tissue</text>
+  </g>
+</svg>

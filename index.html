@@ -1,241 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baolan Supply | One-Stop Restaurant Supplies & Custom Packaging</title>
-  <meta name="description" content="One-stop restaurant supplies and custom packaging for gloves, wet wipes, aprons, takeaway bags, steamer paper, table covers, napkins, meal kits, belly bands, labels and disposable grill sets." />
-  <link rel="preload" as="image" href="images/01-hero-supply-system.webp" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baolan Supply — One-Stop Foodservice Procurement</title>
+  <meta name="description" content="A premium one-stop procurement website for foodservice disposable supplies, custom packaging, and restaurant chain standardization." />
+  <meta name="theme-color" content="#0767d8" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="Baolan Supply home">
       <span class="brand-mark">B</span>
-      <span>
+      <span class="brand-copy">
         <strong>Baolan Supply</strong>
-        <small>Restaurant Disposable & Packaging Solutions</small>
+        <small>Foodservice Procurement</small>
       </span>
     </a>
-    <nav class="nav">
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" data-nav>
       <a href="#products">Products</a>
-      <a href="#solutions">Solutions</a>
       <a href="#custom">Custom</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#quote" class="nav-quote">Get Quote</a>
+      <a href="#system">Supply System</a>
+      <a href="#process">Process</a>
+      <a class="nav-cta" href="#inquiry">Get Quote</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero section-pad">
       <div class="hero-copy reveal">
-        <p class="eyebrow">One-stop restaurant supply system</p>
-        <h1>Restaurant supplies.<br><span>All in one place.</span></h1>
-        <p class="hero-text">Gloves, wet wipes, aprons, takeaway bags, steamer paper, table covers, napkins, meal kits, belly bands, labels and disposable grill sets — sourced as one clean B2B supply system.</p>
+        <p class="eyebrow">One partner. Every restaurant consumable.</p>
+        <h1>Foodservice supplies, packaged with chain-level consistency.</h1>
+        <p class="hero-text">
+          A premium procurement website for disposable gloves, wet wipes, aprons, takeaway packaging,
+          tableware, labels, and custom brand systems — built for restaurant groups, hotels, caterers,
+          and food delivery brands.
+        </p>
         <div class="hero-actions">
-          <a href="#products" class="btn primary">Explore Products</a>
-          <a href="#quote" class="btn ghost">Request Quote</a>
+          <a class="btn primary" href="#products">Explore Products</a>
+          <a class="btn secondary" href="#inquiry">Start Inquiry</a>
+        </div>
+        <div class="trust-row" aria-label="Key capabilities">
+          <span>Food Contact</span>
+          <span>Custom Print</span>
+          <span>Bulk Supply</span>
+          <span>Chain Standardization</span>
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="One-stop restaurant supplies hero visual">
-        <div class="orb orb-a"></div>
-        <div class="orb orb-b"></div>
-        <picture class="hero-image">
-          <img src="images/01-hero-supply-system.webp" alt="Premium restaurant supply products arranged in blue and white style" />
-        </picture>
-        <div class="floating-note note-a">Hygiene</div>
-        <div class="floating-note note-b">Packaging</div>
-        <div class="floating-note note-c">Meal Kits</div>
+      <div class="hero-visual reveal" data-parallax>
+        <div class="hero-card hero-main-card">
+          <img src="images/hero-visual.svg" alt="One-stop restaurant procurement visual" />
+        </div>
+        <div class="floating-panel panel-one">
+          <span class="dot"></span>
+          <strong>20+</strong>
+          <small>Core supply categories</small>
+        </div>
+        <div class="floating-panel panel-two">
+          <strong>OEM</strong>
+          <small>Packaging + logo + carton marks</small>
+        </div>
       </div>
     </section>
 
-    <section class="intro-strip">
-      <span>Disposable Gloves</span>
-      <span>Wet Wipes</span>
-      <span>Aprons</span>
-      <span>Takeaway Bags</span>
-      <span>Steamer Paper</span>
-      <span>Table Covers</span>
-      <span>Napkins</span>
-      <span>Meal Kits</span>
-      <span>Belly Bands</span>
-      <span>Labels</span>
-      <span>Disposable Grill Sets</span>
+    <section class="bento section-pad reveal" aria-labelledby="story-title">
+      <div class="section-label">Procurement story</div>
+      <div class="section-head compact">
+        <h2 id="story-title">From scattered purchases to one unified supply system.</h2>
+        <p>Replace repeated supplier matching with a clean, standardized, restaurant-ready product matrix.</p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="bento-card large glass">
+          <img src="images/product-category.svg" alt="Organized product category matrix" />
+          <div>
+            <span>01 / Category Matrix</span>
+            <h3>Build a clear supply map for each store scenario.</h3>
+          </div>
+        </article>
+        <article class="bento-card blue-card">
+          <span>02 / Brand System</span>
+          <h3>One look across gloves, wipes, bags, labels, cartons.</h3>
+        </article>
+        <article class="bento-card glass">
+          <span>03 / Fast Quote</span>
+          <h3>Quantity, size, material, printing and carton specs in one flow.</h3>
+        </article>
+        <article class="bento-card dark-card">
+          <span>04 / Chain Ready</span>
+          <h3>Standardize SKUs, packs, labels and store usage rules.</h3>
+        </article>
+      </div>
     </section>
 
-    <section class="section product-system" id="products">
+    <section id="products" class="products section-pad">
       <div class="section-head reveal">
-        <p class="eyebrow">Product Range</p>
-        <h2>One sourcing plan. Eleven essential categories.</h2>
-        <p>Each category is presented as a real web component, not a flat screenshot. Images stay independent in the <code>images</code> folder and the website layout is handled by HTML and CSS.</p>
-      </div>
-
-      <div class="product-grid">
-        <article class="product-card reveal">
-          <img src="images/02-gloves.webp" alt="Disposable food service gloves" loading="lazy">
-          <div><span>01</span><h3>Disposable Gloves</h3><p>PE, TPE and nitrile glove options for food handling, takeaway and kitchen hygiene.</p></div>
-        </article>
-        <article class="product-card tall reveal">
-          <img src="images/03-wet-wipes.webp" alt="Individually packed wet wipes" loading="lazy">
-          <div><span>02</span><h3>Wet Wipes</h3><p>Individually packed and soft-pack wet wipes for restaurants, hotels and delivery meals.</p></div>
-        </article>
-        <article class="product-card reveal">
-          <img src="images/04-aprons.webp" alt="Disposable aprons" loading="lazy">
-          <div><span>03</span><h3>Aprons</h3><p>Lightweight disposable aprons for food prep, back-of-house cleaning and service teams.</p></div>
-        </article>
-        <article class="product-card wide reveal">
-          <img src="images/05-takeaway-bags.webp" alt="Takeaway bags and food containers" loading="lazy">
-          <div><span>04</span><h3>Takeaway Bags</h3><p>Paper bags, containers and carry-out packaging for modern delivery operations.</p></div>
-        </article>
-        <article class="product-card reveal">
-          <img src="images/06-steamer-paper.webp" alt="Steamer paper" loading="lazy">
-          <div><span>05</span><h3>Steamer Paper</h3><p>Food-grade steamer paper for dim sum, buns, bamboo steamers and hot kitchens.</p></div>
-        </article>
-        <article class="product-card reveal">
-          <img src="images/07-table-covers.webp" alt="Premium table covers" loading="lazy">
-          <div><span>06</span><h3>Table Covers</h3><p>Disposable table covers that keep dining areas clean, fast to reset and consistent.</p></div>
-        </article>
-        <article class="product-card reveal">
-          <img src="images/08-napkins.webp" alt="Napkins" loading="lazy">
-          <div><span>07</span><h3>Napkins</h3><p>Absorbent napkins and dining paper products for restaurants, cafés and meal kits.</p></div>
-        </article>
-        <article class="product-card wide reveal">
-          <img src="images/09-meal-kits.webp" alt="Meal kits and food containers" loading="lazy">
-          <div><span>08</span><h3>Meal Kits</h3><p>Food container systems for takeaway, delivery, ready-to-cook packages and catering sets.</p></div>
-        </article>
-        <article class="product-card reveal">
-          <img src="images/10-belly-bands.webp" alt="Custom belly bands" loading="lazy">
-          <div><span>09</span><h3>Belly Bands</h3><p>Printed sleeves for boxes and bowls that improve sealing, branding and presentation.</p></div>
-        </article>
-        <article class="product-card reveal">
-          <img src="images/11-labels.webp" alt="Custom labels and sealing stickers" loading="lazy">
-          <div><span>10</span><h3>Labels</h3><p>Custom labels and sealing stickers for packaging identity, order clarity and product finish.</p></div>
-        </article>
-        <article class="product-card tall reveal">
-          <img src="images/12-disposable-grill.webp" alt="Disposable grill sets" loading="lazy">
-          <div><span>11</span><h3>Disposable Grill Sets</h3><p>Disposable grill trays and accessories for outdoor dining, BBQ kits and food-service events.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section story" id="solutions">
-      <div class="story-copy reveal">
-        <p class="eyebrow">Food Service Solutions</p>
-        <h2>Built around real restaurant operating moments.</h2>
-        <p>Instead of simply listing products, the site tells a supply story: hygiene essentials for daily service, takeaway packaging for delivery, and specialty sets for new dining experiences.</p>
-      </div>
-      <div class="story-layout">
-        <article class="story-panel hygiene reveal">
-          <div>
-            <p class="eyebrow">01 / Hygiene</p>
-            <h3>Clean service starts with daily essentials.</h3>
-            <p>Gloves, wet wipes, aprons and napkins create the hygiene layer your team and customers interact with every day.</p>
-          </div>
-          <img src="images/15-delivery-scene.webp" alt="Restaurant service and hygiene supplies" loading="lazy">
-        </article>
-        <article class="story-panel packaging reveal">
-          <img src="images/13-custom-packaging.webp" alt="Custom packaging solutions" loading="lazy">
-          <div>
-            <p class="eyebrow">02 / Packaging</p>
-            <h3>Make every takeaway touchpoint feel consistent.</h3>
-            <p>From bags and boxes to labels and sleeves, packaging can carry your brand without slowing down operations.</p>
-          </div>
-        </article>
-        <article class="story-panel grill reveal">
-          <div>
-            <p class="eyebrow">03 / Specialty Sets</p>
-            <h3>Disposable grill sets for new dining experiences.</h3>
-            <p>Use complete grill and meal-kit solutions for BBQ restaurants, outdoor dining, picnic packages and ready-to-cook food service.</p>
-          </div>
-          <img src="images/12-disposable-grill.webp" alt="Disposable grill sets and meal kit essentials" loading="lazy">
-        </article>
-      </div>
-    </section>
-
-    <section class="section custom" id="custom">
-      <div class="custom-main reveal">
-        <p class="eyebrow">OEM & Private Label</p>
-        <h2>Your logo. Your packaging. One consistent system.</h2>
-        <p>Build a unified look across gloves, wipes, bags, boxes, napkins, labels, sleeves and food-service kits.</p>
-        <div class="custom-steps">
-          <div><span>01</span><strong>Plain Packaging</strong><small>Start with clean stock packaging.</small></div>
-          <div><span>02</span><strong>Logo Printing</strong><small>Add your identity to key touchpoints.</small></div>
-          <div><span>03</span><strong>Labels & Sleeves</strong><small>Use stickers, belly bands and sealing labels.</small></div>
-          <div><span>04</span><strong>Full Customization</strong><small>Scale into a complete branded supply system.</small></div>
+        <div>
+          <div class="section-label">Product universe</div>
+          <h2>Core website product visuals.</h2>
         </div>
+        <p>Each image is an independent file inside the <code>images</code> folder. Replace any SVG with your real product photo later without changing the page structure.</p>
       </div>
+
+      <div class="product-grid" data-products></div>
+    </section>
+
+    <section id="custom" class="custom section-pad">
       <div class="custom-visual reveal">
-        <img src="images/16-oem-process.webp" alt="OEM private label process" loading="lazy">
+        <img src="images/custom-packaging.svg" alt="Custom restaurant packaging system" />
+      </div>
+      <div class="custom-copy reveal">
+        <div class="section-label">Customization</div>
+        <h2>Make every consumable part of your brand experience.</h2>
+        <p>
+          Support for logo printing, bilingual packaging, belly bands, barcodes, batch labels,
+          carton marks, and store-specific identification — designed for repeat orders and chain operation.
+        </p>
+        <div class="feature-list">
+          <div><strong>Packaging</strong><span>Sachets, bags, boxes, labels, wraps</span></div>
+          <div><strong>Visual Identity</strong><span>Logo, color system, product naming, SKU labels</span></div>
+          <div><strong>Compliance</strong><span>Food-contact scenes, single-use marks, traceable batches</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="section brand-section">
-      <div class="brand-showcase reveal">
-        <img src="images/14-brand-showcase.webp" alt="Brand showcase across packaging products" loading="lazy">
+    <section id="system" class="system section-pad reveal">
+      <div class="section-head compact center">
+        <div class="section-label">Supply system</div>
+        <h2>Built for restaurants that need stable, repeatable purchasing.</h2>
+        <p>A website experience that explains capability, not just a product catalog.</p>
       </div>
-      <div class="brand-copy reveal">
-        <p class="eyebrow">Brand Showcase</p>
-        <h2>From supply item to brand experience.</h2>
-        <p>When packaging, hygiene items and table-service consumables share the same visual system, even simple disposable products feel more professional.</p>
-        <a href="#quote" class="btn primary">Start a Custom Project</a>
+
+      <div class="system-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Product Standardization</h3>
+          <p>Define materials, sizes, packing methods and carton specs before quotation.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Custom Packaging</h3>
+          <p>Keep every store-facing consumable visually consistent with brand packaging.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Long-Term Supply</h3>
+          <p>Support bulk orders, recurring SKUs, chain stores and foodservice procurement teams.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section gallery" id="gallery">
+    <section id="process" class="process section-pad">
       <div class="section-head reveal">
-        <p class="eyebrow">Image Assets</p>
-        <h2>20 independent images in the images folder.</h2>
-        <p>The website uses optimized product images separately. They are not baked into one large web screenshot.</p>
+        <div>
+          <div class="section-label">Simple workflow</div>
+          <h2>Inquiry to delivery in four clean steps.</h2>
+        </div>
       </div>
-      <div class="gallery-grid">
-        <img src="images/17-clean-background.webp" alt="Minimal blue background visual" loading="lazy">
-        <img src="images/18-product-range.webp" alt="All-in-one product range" loading="lazy">
-        <img src="images/19-custom-label-roll.webp" alt="Custom label roll" loading="lazy">
-        <img src="images/20-packaging-detail.webp" alt="Packaging detail" loading="lazy">
-        <img src="images/03-wet-wipes.webp" alt="Wet wipes" loading="lazy">
-        <img src="images/06-steamer-paper.webp" alt="Steamer paper" loading="lazy">
-        <img src="images/07-table-covers.webp" alt="Table covers" loading="lazy">
-        <img src="images/12-disposable-grill.webp" alt="Disposable grill" loading="lazy">
+
+      <div class="timeline reveal">
+        <div class="step">
+          <span>1</span>
+          <h3>Send Requirements</h3>
+          <p>Product, size, material, packing, quantity and destination.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h3>Confirm Specs</h3>
+          <p>Artwork, carton details, sample needs and compliance notes.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h3>Quote & Sample</h3>
+          <p>Provide price structure, lead time and optional sample confirmation.</p>
+        </div>
+        <div class="step">
+          <span>4</span>
+          <h3>Mass Supply</h3>
+          <p>Production, quality check, packing and shipment support.</p>
+        </div>
       </div>
     </section>
 
-    <section class="quote-section" id="quote">
-      <div class="quote-background">
-        <img src="images/17-clean-background.webp" alt="" loading="lazy">
+    <section id="inquiry" class="inquiry section-pad reveal">
+      <div class="inquiry-bg" aria-hidden="true">
+        <img src="images/quote-background.svg" alt="" />
       </div>
-      <div class="quote-content reveal">
-        <p class="eyebrow">Request a Quote</p>
-        <h2>Tell us your product list.</h2>
-        <p>Share the product categories, quantity, packaging style and customization requirements. We will help match the right restaurant disposable supply plan.</p>
-        <form class="quote-form">
-          <input type="text" placeholder="Name" aria-label="Name">
-          <input type="text" placeholder="Company" aria-label="Company">
-          <input type="email" placeholder="Email" aria-label="Email">
-          <select aria-label="Product interest">
-            <option>Product Interest</option>
-            <option>Disposable Gloves</option>
-            <option>Wet Wipes</option>
-            <option>Aprons</option>
-            <option>Takeaway Packaging</option>
-            <option>Steamer Paper</option>
-            <option>Table Covers / Napkins</option>
-            <option>Meal Kits / Grill Sets</option>
-            <option>Custom Labels / Belly Bands</option>
-          </select>
-          <textarea placeholder="Tell us about quantity, packaging and customization requirements." aria-label="Message"></textarea>
-          <button type="button" class="btn primary">Send Inquiry</button>
+      <div class="inquiry-card">
+        <div>
+          <div class="section-label">Get quote</div>
+          <h2>Tell us what your stores use every day.</h2>
+          <p>Use this section as your website inquiry module. It can later connect to Formspree, Google Forms, WPS form, or your CRM.</p>
+        </div>
+
+        <form class="quote-form" onsubmit="return false;" aria-label="Inquiry form demo">
+          <label>
+            Product category
+            <select>
+              <option>Disposable PE Gloves</option>
+              <option>Wet Wipes</option>
+              <option>Takeaway Packaging</option>
+              <option>Napkins / Tableware</option>
+              <option>Custom Packaging</option>
+            </select>
+          </label>
+          <label>
+            Order quantity
+            <input type="text" placeholder="e.g. 100,000 pcs" />
+          </label>
+          <label>
+            Custom printing
+            <select>
+              <option>Logo printing required</option>
+              <option>No printing</option>
+              <option>Need packaging design support</option>
+            </select>
+          </label>
+          <label>
+            Notes
+            <textarea placeholder="Material, size, packing method, destination, artwork requirements..."></textarea>
+          </label>
+          <button class="btn primary" type="submit">Prepare Inquiry</button>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>Baolan Supply</span>
-    <span>One-stop restaurant disposable & packaging solutions.</span>
-    <span>© 2026</span>
+  <footer class="site-footer">
+    <div>
+      <strong>Baolan Supply</strong>
+      <p>One-stop foodservice consumables and custom packaging procurement.</p>
+    </div>
+    <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

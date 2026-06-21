@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Custom Packaging</title>
+  <desc id="desc">Flexible print solutions</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset=".55" stop-color="#edf6ff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dff0ff"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#075aaf" flood-opacity=".16"/>
+    </filter>
+    <radialGradient id="orb" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#73b9ff" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#73b9ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="520" rx="46" fill="url(#bg)"/>
+  <circle cx="610" cy="86" r="148" fill="url(#orb)"/>
+  <circle cx="94" cy="430" r="130" fill="#cfe7ff" opacity=".32"/>
+  
+        <g filter="url(#soft)">
+          <rect x="190" y="142" width="220" height="250" rx="40" fill="#fff" stroke="#d7eaff" stroke-width="6"/>
+          <rect x="330" y="100" width="210" height="170" rx="36" fill="#eef7ff" stroke="#b9dcff" stroke-width="5"/>
+          <path d="M240 208h120M240 252h96M374 172h112M374 212h78" stroke="#0a6fdc" stroke-width="14" stroke-linecap="round" opacity=".7"/>
+          <circle cx="300" cy="320" r="34" fill="#0a6fdc" opacity=".78"/>
+        </g>
+        
+  <g font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="58" y="448" fill="#071b33" font-size="31" font-weight="760" letter-spacing="-.8">Custom Packaging</text>
+    <text x="58" y="482" fill="#58708a" font-size="18" font-weight="520">Flexible print solutions</text>
+  </g>
+</svg>
